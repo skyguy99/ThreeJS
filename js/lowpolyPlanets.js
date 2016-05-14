@@ -7,15 +7,15 @@
         
     function init() {  
         
-	var WIDTH = 400,
-	    HEIGHT = 300;
+	var WIDTH = 200,
+	    HEIGHT = 200;
         // set some camera attributes
 	var VIEW_ANGLE = 45,
 	    ASPECT = WIDTH / HEIGHT,
 	    NEAR = 0.1,
 	    FAR = 10000;
 	// get the DOM element to attach to
-	var $container = $('#planet');
+	var $container = $('#btn1');
 	// Define all variables --------------------------------------------------------------
 	renderer = new THREE.WebGLRenderer({alpha: true});
 	renderer.setSize(WIDTH, HEIGHT);

@@ -1,25 +1,4 @@
 
-/*.round-button {
-   
-    background: cover;
-    width: 200px;
-    
-    height: 200px;
-    padding-bottom: 10%;
-    border-radius: 50%;
-    overflow: hidden;
-    background: #000;
-    box-shadow: 0 0 3px gray;
-}
-.round-button:hover {
-    background: #262626;
-}
-ul {
-    width: 70%;
-    margin: auto;
-}*/
-
-
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
 * {
   box-sizing: border-box;
@@ -37,20 +16,96 @@ ul {
     url("http://db.onlinewebfonts.com/t/e2ada776bd0252e6e44e89ea055cad60.ttf") format("truetype"),
     url("http://db.onlinewebfonts.com/t/e2ada776bd0252e6e44e89ea055cad60.svg#Nova SOLID") format("svg");
 }
-#planet {
-    
-    
-    height: auto;
-    margin: 0 auto;
-    
+#page2 {
+    background-color: #50a3a2;
+    background-color: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background-color: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+}
+
+#page1 {
+    background-color: #000;
+}
+.circle1 {
+    background: #50a3a2;
+    background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+    display: table;
+    border-radius: 50%;
     position: relative;
-    padding: 0px;
+    margin: 50px auto;
+    height: 100px;
+    width: 100px;
+}
+.wrapper2 {
+    background: #50a3a2;
+    background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+}
+.overlay:hover {
+    /*background:#30588e;*/
+}
+.circle2 {
+    background: #000;
+    display: table;
+    border-radius: 50%;
+    position: relative;
+    margin: 50px auto;
+    height: 100px;
+    width: 100px;
+}
+#btn1 {
+    
+    vertical-align: middle;
+    text-align:center;
+    left:0%;
+    position:relative; /*makes left effective*/
+    display:table-cell;
+}
+#btn2 {
+    vertical-align: middle;
+    text-align:center;
+    left:0%;
+    position:relative; /*makes left effective*/
+    display:table-cell;
+}
+.ulContainer {
+    position: absolute;
+    clear: both;
+  margin: auto;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+ width: 500px;
+  height: 500px;
+}
+ul {
+    display: inline-block;
+    margin: 0;
+        padding: 0;
+   
+}
+li {
+    
+    float: left;
+list-style-type: none;
+padding: 20px;
 }
 body {
   font-family: 'Gotham', sans-serif;
     font-weight: 300;
   color: white;
   font-size: 9px;
+    
+}
+.desc {
+    padding-top: 7%;
+    
+    text-align: center;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+    font-size: 12pt;
+    line-height: 1.2em;
+    color: #fff;
 }
 #titleHead {
     font-family: 'Nova SOLID', sans-serif;
@@ -59,9 +114,7 @@ body {
     line-height: 80px;
 }
 .wrapper {
-    background: #50a3a2;
-    background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+   
     position: absolute;
     top: 0%;
     left: 0;
@@ -69,6 +122,7 @@ body {
     height: 100%;
     margin-top: 0px;
     overflow: hidden;
+    
 }
 .container {
     max-width: 600px;
@@ -76,12 +130,4 @@ body {
     padding: 80px 0;
     height: 400px;
     text-align: center;
-}
-.container h1 {
-  font-size: 40px;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in-put;
-          transition-timing-function: ease-in-put;
-  font-weight: 200;
 }
