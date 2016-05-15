@@ -16,14 +16,34 @@
     url("http://db.onlinewebfonts.com/t/e2ada776bd0252e6e44e89ea055cad60.ttf") format("truetype"),
     url("http://db.onlinewebfonts.com/t/e2ada776bd0252e6e44e89ea055cad60.svg#Nova SOLID") format("svg");
 }
-#page2 {
+.wrapper2 {
     background-color: #50a3a2;
-    background-color: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-    background-color: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+    color: #fff;
+    background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    overflow: scroll;
+    z-index: -1;
 }
 
-#page1 {
-    background-color: #000;
+.wrapper1 {
+    background-image: url(../images/poly/shadow.jpg);
+    background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    overflow: scroll;
+    z-index: -1;
 }
 .circle1 {
     background: #50a3a2;
@@ -69,7 +89,7 @@
     display:table-cell;
 }
 .ulContainer {
-    position: absolute;
+    position: relative; /* may need absolute*/
     clear: both;
   margin: auto;
   top: 50%;
@@ -78,6 +98,7 @@
   left: 0;
  width: 500px;
   height: 500px;
+    overflow-x: scroll;
 }
 ul {
     display: inline-block;
@@ -98,19 +119,31 @@ body {
   font-size: 9px;
     
 }
+.line {
+    background: white;
+    width: 300px;
+    top: 10%;
+    height: 3.2px;
+    margin:auto;
+    position: relative;
+}
 .desc {
-    padding-top: 7%;
-    
+    padding-top: 10%;
+
+    float: center;
     text-align: center;
-    font-family: "Helvetica Neue",Helvetica,Arial;
+    font-family: "Roboto",Helvetica,Arial;
     font-size: 12pt;
-    line-height: 1.2em;
+    font-weight: 100;
+    line-height: 1.3em;
     color: #fff;
 }
 #titleHead {
-    font-family: 'Nova SOLID', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 180px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 150px;
     line-height: 80px;
 }
 .wrapper {
@@ -125,7 +158,7 @@ body {
     
 }
 .container {
-    max-width: 600px;
+    max-width: 550px;
     margin: 0px auto;
     padding: 80px 0;
     height: 400px;
