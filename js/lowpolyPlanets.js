@@ -95,7 +95,7 @@
     scene.add(mesh3);
     
     //stars
-    scene.add(new createParticleSystem());
+    //scene.add(new createParticleSystem());
         
     pointLight = new THREE.PointLight( 0xFFFFFF );
 	// set its position
@@ -104,6 +104,8 @@
 	pointLight.position.z = 100;
 	// add to the scene
 	scene.add(pointLight);
+        
+    createParticleSystem();
 	
 }
 function createParticleSystem() {
@@ -113,7 +115,7 @@ function createParticleSystem() {
      
     // Particles are just individual vertices in a geometry
     // Create the geometry that will hold all of the vertices
-    var particles = new THREE.IcosahedronGeometry(1, 0);
+    var particles = new THREE.IcosahedronGeometry(1);
  
     // Create the vertices and add them to the particles geometry
     for (var p = 0; p < particleCount; p++) {
@@ -124,11 +126,11 @@ function createParticleSystem() {
         var z = Math.random() * 400 - 200;
                
         // Create the vertex
-        var particle = new THREE.Vector3(x, y, z);
+        //var particle = new THREE.Vector3(x, y, z);
          
         // Add the vertex to the geometry
-        particles.vertices.push(particle);
-    }
+        //particles.vertices.push(particle);
+    
  
     // Create the material that will be used to render each vertex of the geometry
     var particleMaterial = new THREE.PointsMaterial(
@@ -139,12 +141,19 @@ function createParticleSystem() {
              transparent: true,
             });
     
+     
+  material = new THREE.MeshPhongMaterial( { color:0xffffff, shading:THREE.FlatShading } );
+  material.side = THREE.DoubleSide;
+  mesh= new THREE.Mesh(particles, material);
+  mesh.position.set(x, y, z);
+  scene.add(mesh);
+}
     var partMaterial2 = new THREE.MeshPhongMaterial({ color: 0xffffff, shading: THREE.FlatShading, vertexColors: THREE.VertexColors, shininess: 0	} );
       
     // Create the particle system
-    particleSystem = new THREE.Points(particles, particleMaterial);
+    //particleSystem = new THREE.Points(particles, material);
  
-    return particleSystem;  
+    //return particleSystem;  
 }
 function animate() {
 	requestAnimationFrame( animate );
